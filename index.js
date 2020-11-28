@@ -10,4 +10,11 @@ var numbers = Array(45)
 .map(function (element, index) {
   return index + 1;
 })
-console.log(numbers)
+
+
+var shuffle = [];
+while (numbers.length > 0) {
+  var moveNumber = numbers.splice(Math.floor(Math.random() * numbers.length), 1)[0];
+  shuffle.push(moveNumber);
+}
+console.log(shuffle);
